@@ -7,6 +7,7 @@ import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
 import PageNotFound from "./pages/PageNotFound"
 import Layout from "./component/layout/Layout"
+import CarSinglePage from "./pages/CarSinglePage"
 
 function App() {
 
@@ -16,10 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/cars" element={<Cars />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
+            <Route path="about" element={<About />} />
+            <Route path="cars" element={<Cars />} />
+            <Route path="cars/:id" element={<CarSinglePage />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<SignUp />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
