@@ -6,16 +6,16 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const[showLinks,setShowLinks]=useState(false)
-    const{isLoggedIn,setIsLoggedIn}=useContext(AuthContext)
+  const [showLinks, setShowLinks] = useState(false)
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
 
-    const login = ()=>{
-        setIsLoggedIn(true)
-    }
+  const login = () => {
+    setIsLoggedIn(true)
+  }
 
-    const logout = ()=>{
-        setIsLoggedIn(false)
-    }
+  const logout = () => {
+    setIsLoggedIn(false)
+  }
 
   return (
     <nav>
@@ -38,12 +38,14 @@ const Navbar = () => {
                 <div className="flex justify-center items-center lg:w-25 lg:h-13">
                   Cars
                 </div>
-                <button
-                  onClick={logout}
-                  className="lg:hover:bg-blue-600 hover:scale-105 hover:-translate-y-0.5 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-200 transition-all ease-out lg:w-25 lg:h-13 lg:font-semibold rounded-md lg:border"
-                >
-                  Logout
-                </button>
+                <NavLink to="/">
+                  <button
+                    onClick={logout}
+                    className="lg:hover:bg-blue-600 hover:scale-105 hover:-translate-y-0.5 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-200 transition-all ease-out lg:w-25 lg:h-13 lg:font-semibold rounded-md lg:border"
+                  >
+                    Logout
+                  </button>
+                </NavLink>
               </NavLink>
             ) : (
               <NavLink to="/login" className="flex lg:flex-row flex-col items-center gap-5 lg:gap-10">
@@ -53,9 +55,11 @@ const Navbar = () => {
                 >
                   Login
                 </button>
-                <button className="lg:bg-violet-700 hover:scale-105 hover:-translate-y-0.5 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-200 transition-all ease-out lg:w-25 lg:h-13 lg:font-semibold rounded-md">
-                  Sign up
-                </button>
+                <NavLink to="/signup">
+                  <button className="lg:bg-violet-700 hover:scale-105 hover:-translate-y-0.5 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-200 transition-all ease-out lg:w-25 lg:h-13 lg:font-semibold rounded-md">
+                    Sign up
+                  </button>
+                </NavLink>
               </NavLink>
             )}
           </ul>

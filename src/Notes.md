@@ -27,3 +27,12 @@
 * Complete the notes
 
 * Design Home Page,About Page ...
+
+
+## SEO (Search Engin Optimisation)
+
+* seo is a process of improving a websites visibility in search reasults on search engins like chrome etc.
+
+
+## Active NavLink
+

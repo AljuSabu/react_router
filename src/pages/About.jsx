@@ -1,8 +1,16 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <Helmet>
+        <title>About AutoElite</title>
+      </Helmet>
+      <div>
+        About
+      </div>
+    </div>
   )
 }
 

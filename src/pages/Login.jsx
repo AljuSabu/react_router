@@ -1,8 +1,14 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+      <Helmet>
+        <title>Login AutoElite</title>
+      </Helmet>
+      <div>Login</div>
+    </div>
   )
 }
 
