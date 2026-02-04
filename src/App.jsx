@@ -7,6 +7,10 @@ import SignUp from "./pages/SignUp";
 import PageNotFound from "./pages/PageNotFound";
 import Layout from "./component/layout/Layout";
 import CarSinglePage from "./pages/CarSinglePage";
+import AdminLayout from "./component/adminLayout/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import Income from "./pages/admin/Income";
+import Review from "./pages/admin/Review";
 
 function App() {
   return (
@@ -21,6 +25,12 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="*" element={<PageNotFound />} />
+
+            <Route path="admin" element={<AdminLayout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="income" element={<Income />} />
+              <Route path="review" element={<Review />} />
+            </Route>
           </Route>
         </Routes>
       </div>

@@ -38,7 +38,7 @@ const Home = () => {
         />
 
         {/* DARK LAYER */}
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/50" />
 
         {/* CONTENT */}
         <div className="relative z-10 min-h-screen flex items-center justify-center">

@@ -37,9 +37,12 @@ const Cars = () => {
         {/* Car Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-15 xl:mt-20">
           {data.map((car) => (
-            <Link to={`${car.id}`}>
-              <CarCard key={car.id} car={car} />
-            </Link>
+            <div key={car.id}>
+              <Link to={`${car.id}`}>
+                <CarCard car={car} />
+              </Link>
+            </div>
+
           ))}
         </div>
       </div>
