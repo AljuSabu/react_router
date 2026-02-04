@@ -1,40 +1,104 @@
-import React from 'react'
+import React from "react";
+import SendIcon from '@mui/icons-material/Send';
 
 const Footer = () => {
-    return (
-        <div>
-            <footer className="px-4 py-8 bg-gray-800 text-gray-400">
-                <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
-                    <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">
-                        <div className="flex items-center justify-center shrink-0 w-12 h-12 rounded-full bg-violet-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5 rounded-full text-gray-900">
-                                <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
-                            </svg>
-                        </div>
-                        <ul className="flex flex-wrap items-center space-x-4 sm:space-x-8">
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Terms of Use</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
-                        <li>
-                            <a rel="noopener noreferrer" href="#">Instagram</a>
-                        </li>
-                        <li>
-                            <a rel="noopener noreferrer" href="#">Facebook</a>
-                        </li>
-                        <li>
-                            <a rel="noopener noreferrer" href="#">Twitter</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+  return (
+    <footer className="bg-linear-to-tr from-slate-900 via-black to-slate-900 border-t text-white border-white/10 py-12 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="col-span-1 md:col-span-1">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-xl font-bold tracking-tighter">
+              AUTO<span className="text-blue-500">ELITE</span>
+            </span>
+          </div>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Revolutionizing the luxury car shopping experience with cutting-edge
+            technology and unparalleled service.
+          </p>
         </div>
-    )
-}
+        <div>
+          <h4 className="font-bold mb-4">Explore</h4>
+          <ul className="space-y-2 text-sm text-slate-400">
+            <li>
+              <span className="hover:text-blue-400 transition-colors">
+                Featured Inventory
+              </span>
+            </li>
+            <li>
+              <span className="hover:text-blue-400 transition-colors">
+                Electric Lineup
+              </span>
+            </li>
+            <li>
+              <span className="hover:text-blue-400 transition-colors">
+                Trade-In
+              </span>
+            </li>
+            <li>
+              <span className="hover:text-blue-400 transition-colors">
+                Financing
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-bold mb-4">Company</h4>
+          <ul className="space-y-2 text-sm text-slate-400">
+            <li>
+              <span className="hover:text-blue-400 transition-colors">
+                About Us
+              </span>
+            </li>
+            <li>
+              <span  className="hover:text-blue-400 transition-colors">
+                Careers
+              </span>
+            </li>
+            <li>
+              <span className="hover:text-blue-400 transition-colors">
+                Press
+              </span>
+            </li>
+            <li>
+              <span className="hover:text-blue-400 transition-colors">
+                Contact
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-bold mb-4">Newsletter</h4>
+          <p className="text-sm text-slate-400 mb-4">
+            Get the latest automotive news and offers.
+          </p>
+          <div className="flex gap-2">
+            <input
+              type="email"
+              placeholder="Email"
+              className="bg-slate-900 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-blue-500"
+            />
+            <button className="bg-blue-600 px-4 rounded-lg hover:bg-blue-500 transition-colors">
+                <SendIcon/>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <p>© 2024 AutoElite Marketplace. All rights reserved.</p>
+        <div className="flex gap-6">
+          <span className="hover:text-white cursor-pointer">
+            Privacy Policy
+          </span>
+          <span className="hover:text-white cursor-pointer">
+            Terms of Service
+          </span>
+          <span className="hover:text-white cursor-pointer">
+            Cookie Policy
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
