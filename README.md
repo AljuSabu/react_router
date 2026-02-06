@@ -57,6 +57,3 @@ Actively being built and improved.
 ---
 
 > A complete README with full documentation, screenshots, and usage details will be added once the project is finalized.
-
-```
-
