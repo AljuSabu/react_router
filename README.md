@@ -1,16 +1,62 @@
-# React + Vite
+# 🚗 Cars Showcase App (Work in Progress)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based web application for showcasing cars with smooth animations, carousel interactions, and responsive design.
 
-Currently, two official plugins are available:
+⚠️ **This project is currently under active development.**  
+Features, structure, and UI are still evolving. This README is temporary and will be replaced once the project is complete.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+### Live Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[live@](https://al-react-router.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🛠️ Tech Stack
+
+- **React**
+- **React Router**
+- **Tailwind CSS**
+- **React Slick (Carousel)**
+
+---
+
+## ✨ Current Features
+
+- Responsive navigation bar with active link styling
+- Home page with animated car carousel
+- Dynamic car information and image cards
+- Blurred background effects synced with content (in progress)
+- Mobile-first responsive layout
+
+
+## ▶️ Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 📌 Notes
+
+* This project is **not finished**
+* Code structure and components may change
+* UI and logic are actively being refactored
+
+---
+
+## 📅 Status
+
+**Development Phase** 🚀
+Actively being built and improved.
+
+---
+
+> A complete README with full documentation, screenshots, and usage details will be added once the project is finalized.
+
+```
+
