@@ -11,6 +11,7 @@ import AdminLayout from "./component/adminLayout/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import Income from "./pages/admin/Income";
 import Review from "./pages/admin/Review";
+import Inventory from "./pages/admin/Inventory";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="admin" element={<AdminLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
+              <Route path="inventory" element={<Inventory />} />
               <Route path="review" element={<Review />} />
             </Route>
           </Route>

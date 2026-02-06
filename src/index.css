@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.slick-slide > div {
+  width: 100%;
+}
