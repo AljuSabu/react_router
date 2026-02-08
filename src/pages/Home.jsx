@@ -11,12 +11,12 @@ import { useSearchParams, Link } from "react-router-dom";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [searchTerm, setSearchTerm] = useState("")
+  const [homeSearchTerm, setHomeSearchTerm] = useState("")
 
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
   // console.log(searchParams.get("name"));
   const nameFilter = searchParams.get("name")
-  console.log(nameFilter);
+  // console.log(nameFilter);
 
   const generateSearchParamsString =(key,value)=>{
     const sp = new URLSearchParams(searchParams)
@@ -80,7 +80,7 @@ const Home = () => {
 
 
           <div className="flex justify-center gap-40 mb-20">
-            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+            <SearchBar searchTerm={homeSearchTerm} setSearchTerm={setHomeSearchTerm} />
             <div className="border text-slate-500 z-10 flex gap-10 bg-slate-900 border-white/10 rounded-full focus:outline-none focus:border-blue-500 transition-all pl-12 md:pl-15 py-3 xl:py-4 px-10 text-xs md:text-base xl:text-lg xl:min-w-100">
               <Link to={generateSearchParamsString("name","rolls-royce")}>
                 <div className="cursor-pointer">Rolls-Royce</div>
@@ -97,10 +97,10 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-10 p-10">
+          <div className="grid gap-10 p-10 sm:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-15 xl:mt-20">
             {data
               .filter((item) => {
-                return searchTerm.toLowerCase() === "" ? item : item.name.toLowerCase().includes(searchTerm.toLowerCase())
+                return homeSearchTerm.toLowerCase() === "" ? item : item.name.toLowerCase().includes(homeSearchTerm.toLowerCase())
               })
               .filter(item => {
                 return nameFilter ? item.name.toLowerCase() === nameFilter : item

@@ -15,7 +15,7 @@ const CarSinglePage = () => {
   return (
     <>
       <PageTransition>
-        <div>CarSinglePage</div>
+        <div className="min-h-screen" >CarSinglePage</div>
       </PageTransition>
     </>
   );
