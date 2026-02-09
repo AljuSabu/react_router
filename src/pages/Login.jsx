@@ -1,9 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import PageTransition from "../component/ui/PageTransition";
+import AuthContext from "../context/AuthContext";
 
 const Login = () => {
+  const { setIsLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setIsLoggedIn(true);
+    navigate("/admin");
+  };
+
   return (
     <>
       <Helmet>
@@ -22,7 +32,10 @@ const Login = () => {
               </p>
             </div>
 
-            <form className="space-y-4 md:space-y-6 xl:space-y-10">
+            <form
+              onSubmit={handleLogin}
+              className="space-y-4 md:space-y-6 xl:space-y-10"
+            >
               <div className="flex flex-col gap-1 md:gap-2">
                 <label className="text-[10px] md:text-xs xl:text-base font-bold text-slate-500 tracking-widest px-1">
                   EMAIL ADDRESS

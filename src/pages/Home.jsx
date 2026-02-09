@@ -92,7 +92,7 @@ const Home = () => {
                 <div className="cursor-pointer">Lamborghini</div>
               </Link>
               <Link to=".">
-              <div className="cursor-pointer">View All</div>
+              <div className="cursor-pointer">All</div>
               </Link>
             </div>
           </div>

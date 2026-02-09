@@ -6,17 +6,11 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
-
-  //For Login
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-    setShowLinks(false);
-  };
+  const { isLoggedIn,setIsLoggedIn } = useContext(AuthContext);
 
   //For Logout
   const handleLogout = () => {
-    setIsLoggedIn(false);
+    setIsLoggedIn(false)
     setShowLinks(false);
   };
 
@@ -39,7 +33,7 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            to="/cars"
+            to="cars"
             onClick={() => setShowLinks(false)}
             className={({ isActive }) =>
               `cursor-pointer flex justify-center items-center lg:w-25 lg:h-13 hover:text-white transition-colors ${isActive ? "text-white" : "text-white/60 "}`
@@ -48,7 +42,7 @@ const Navbar = () => {
             Cars
           </NavLink>
           <NavLink
-            to="/about"
+            to="about"
             onClick={() => setShowLinks(false)}
             className={({ isActive }) =>
               `cursor-pointer flex justify-center items-center lg:w-25 lg:h-13 hover:text-white transition-colors ${isActive ? "text-white" : "text-white/60 "}`
@@ -79,7 +73,7 @@ const Navbar = () => {
             <div className="flex lg:flex-row flex-col items-center gap-5 lg:gap-10">
               <NavLink
                 to="/login"
-                onClick={handleLogin}
+                onClick={()=>setShowLinks(false)}
                 className={({ isActive }) =>
                   `cursor-pointer flex justify-center items-center rounded-lg transition-colors ${isActive ? "text-white" : "text-white/60 hover:text-white"} lg:border lg:border-white/40 lg:text-white lg:hover:bg-white/30 lg:hover:scale-105 lg:hover:-translate-y-0.5 lg:active:scale-95 lg:duration-200 lg:transition-all lg:ease-out lg:w-25 lg:h-13 lg:font-semibold`
                 }

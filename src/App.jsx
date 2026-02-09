@@ -12,6 +12,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import Income from "./pages/admin/Income";
 import Review from "./pages/admin/Review";
 import Inventory from "./pages/admin/Inventory";
+import ProtectedRoute from "./context/ProtectedRoute";
 
 function App() {
   return (
@@ -27,7 +28,14 @@ function App() {
             <Route path="signup" element={<SignUp />} />
             <Route path="*" element={<PageNotFound />} />
 
-            <Route path="admin" element={<AdminLayout />}>
+            <Route
+              path="admin"
+              element={
+                <ProtectedRoute>
+                  <AdminLayout />
+                </ProtectedRoute>
+              }
+            >
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
               <Route path="inventory" element={<Inventory />} />
