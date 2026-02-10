@@ -17,7 +17,7 @@ export const data = [
     shortDescription:
       "An ultra-luxury sedan focused on silence, comfort, and handcrafted elegance.",
     description:
-      "The Rolls-Royce Ghost is designed for effortless comfort and refined elegance. It delivers an exceptionally smooth drive, near-total cabin silence, and unmatched craftsmanship in every detail.",
+      "The Rolls-Royce Ghost is engineered for effortless luxury and serene comfort. Built around the philosophy of minimal effort, it offers an incredibly smooth driving experience, near-total cabin silence, and a perfectly balanced ride. Every element, from the handcrafted interior materials to the advanced suspension system, is designed to cocoon occupants in unmatched refinement and calm.",
     images: ["/images/ghost-1.jpg"],
   },
 
@@ -39,7 +39,7 @@ export const data = [
     shortDescription:
       "The ultimate luxury sedan built for unmatched comfort, prestige, and presence.",
     description:
-      "The Phantom represents the pinnacle of luxury motoring. Crafted for royalty and top executives, it prioritizes rear-seat comfort, timeless design, and an unmatched sense of presence.",
+      "The Phantom stands as the ultimate expression of Rolls-Royce luxury and prestige. Designed to be chauffeur-driven, it delivers extraordinary rear-seat comfort, vast interior space, and meticulous craftsmanship. From its commanding presence on the road to its whisper-quiet cabin and bespoke detailing options, the Phantom represents timeless elegance and authority at the highest level.",
     images: ["/images/Phantom-1.jpg"],
   },
 
@@ -61,7 +61,7 @@ export const data = [
     shortDescription:
       "A luxury SUV that gives you Rolls-Royce comfort across every terrain.",
     description:
-      "The Cullinan blends Rolls-Royce refinement with SUV capability. Designed for extreme comfort on any surface, it offers elegance, authority, and effortless performance everywhere.",
+      "The Cullinan brings Rolls-Royce luxury into the world of SUVs without compromise. Combining all-terrain capability with signature comfort, it glides effortlessly over any surface while maintaining absolute refinement. Its elevated seating position, opulent interior, and powerful performance make it equally suited for urban roads and adventurous journeys.",
     images: ["/images/Cullinan-1.jpg"],
   },
 
@@ -83,7 +83,7 @@ export const data = [
     shortDescription:
       "A precision-focused supercar engineered for speed and driving thrill.",
     description:
-      "The Ferrari 488 GTB is built for pure performance. With razor-sharp handling, aggressive styling, and explosive acceleration, it delivers an intense and engaging driving experience.",
+      "The Ferrari 488 GTB is a driver-focused supercar crafted for exhilarating performance. Featuring a mid-mounted twin-turbo V8 and advanced aerodynamics, it delivers explosive acceleration and razor-sharp handling. Its aggressive styling and track-inspired engineering make every drive an immersive and adrenaline-filled experience.",
     images: ["/images/GTB-1.jpg"],
   },
 
@@ -105,7 +105,7 @@ export const data = [
     shortDescription:
       "A modern Ferrari supercar combining extreme performance with sharp design.",
     description:
-      "The F8 Tributo represents the evolution of Ferrari's V8 legacy. It offers breathtaking speed, improved aerodynamics, and a perfect balance between track capability and road usability.",
+      "The F8 Tributo celebrates Ferrari's legendary V8 heritage with cutting-edge performance and modern design. Lighter, faster, and more aerodynamically efficient than its predecessor, it delivers breathtaking speed and precise handling. Despite its track-ready nature, it remains refined and usable for everyday driving.",
     images: ["/images/Tributo-1.jpg"],
   },
 
@@ -127,7 +127,7 @@ export const data = [
     shortDescription:
       "A hybrid supercar delivering extreme performance with future technology.",
     description:
-      "The SF90 Stradale is Ferrari's leap into electrified performance. Combining a V8 engine with electric motors, it delivers mind-blowing acceleration and next-generation driving dynamics.",
+      "The SF90 Stradale marks Ferrari's bold step into the future of high-performance cars. By combining a powerful V8 engine with electric motors, it achieves astonishing acceleration and advanced all-wheel-drive dynamics. This hybrid supercar blends innovation, sustainability, and extreme performance into a truly next-generation driving experience.",
     images: ["/images/Stradale-1.jpg"],
   },
 
@@ -149,7 +149,7 @@ export const data = [
     shortDescription:
       "A screaming V10 supercar thats built for raw excitement and precision.",
     description:
-      "The Huracán EVO is aggressive, loud, and emotionally charged. Powered by a naturally aspirated V10, it delivers thrilling performance and sharp handling on road and track.",
+      "The Huracán EVO delivers raw emotion and high-revving excitement through its naturally aspirated V10 engine. Designed to thrill, it features aggressive styling, advanced aerodynamics, and precise all-wheel-drive handling. Every drive is loud, fast, and deeply engaging, staying true to Lamborghini's dramatic character.",
     images: ["/images/EVO-1.jpg"],
   },
 
@@ -171,7 +171,7 @@ export const data = [
     shortDescription:
       "A dramatic V12 supercar designed for maximum impact and power.",
     description:
-      "The Aventador is Lamborghini's flagship V12 masterpiece. With its bold design, thunderous engine, and extreme performance, it delivers an unforgettable driving experience.",
+      "The Aventador is Lamborghini's iconic V12 flagship, built for maximum drama and performance. With its unmistakable design, scissor doors, and thunderous engine note, it commands attention everywhere it goes. Brutally fast and emotionally charged, it offers an unforgettable supercar experience.",
     images: ["/images/Aventador-1.jpg"],
   },
 
@@ -193,7 +193,7 @@ export const data = [
     shortDescription:
       "A bold performance SUV combining supercar attitude with practicality.",
     description:
-      "The Urus redefines the luxury SUV segment. It combines Lamborghini's aggressive design language with everyday usability, delivering speed, comfort, and commanding road presence.",
+      "The Urus blends supercar DNA with everyday practicality in a high-performance SUV package. It delivers thrilling acceleration, sharp handling, and luxurious comfort, all wrapped in bold Lamborghini styling. Designed for both city driving and long journeys, the Urus dominates the road with confidence and versatility.",
     images: ["/images/Urus-1.jpg"],
   },
 ];

@@ -51,8 +51,8 @@ const Home = () => {
       <Helmet>
         <title>Home AutoElite</title>
       </Helmet>
-      <PageTransition>
 
+      <PageTransition>
         <section className="relative min-h-screen overflow-hidden py-10 md:py-0 lg:py-15 xl:py-5">
           {/* BLURED BACKGROUND */}
           <div
