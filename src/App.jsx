@@ -21,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path="/:id" element={<CarSinglePage />} />
             <Route path="cars" element={<Cars />} />
             <Route path="cars/:id" element={<CarSinglePage />} />
             <Route path="about" element={<About />} />

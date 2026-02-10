@@ -7,28 +7,30 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import SearchBar from "../component/cards/SearchBar";
 import CarCard from "../component/cards/CarCard";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams, Link, NavLink } from "react-router-dom";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [homeSearchTerm, setHomeSearchTerm] = useState("")
+  const [homeSearchTerm, setHomeSearchTerm] = useState("");
+  const [activeFilter, setActiveFilter] = useState("All");
 
-  const [searchParams] = useSearchParams()
+  const [searchParams] = useSearchParams();
   // console.log(searchParams.get("name"));
-  const nameFilter = searchParams.get("name")
+  const nameFilter = searchParams.get("name");
   // console.log(nameFilter);
 
-  const generateSearchParamsString =(key,value)=>{
-    const sp = new URLSearchParams(searchParams)
+  const generateSearchParamsString = (key, value) => {
+    const sp = new URLSearchParams(searchParams);
     if (value === null) {
-      sp.delete(key)
-    }else{
-      sp.set(key,value)
+      sp.delete(key);
+    } else {
+      sp.set(key, value);
     }
     // console.log(sp.toString());
-    return `?${sp.toString()}`
-  }
+    return `?${sp.toString()}`;
+  };
 
+  const cat = ["All", "Rolls-Royce", "Ferrari", "Lamborghini"];
 
   var settings = {
     dots: false,
@@ -50,6 +52,7 @@ const Home = () => {
         <title>Home AutoElite</title>
       </Helmet>
       <PageTransition>
+
         <section className="relative min-h-screen overflow-hidden py-10 md:py-0 lg:py-15 xl:py-5">
           {/* BLURED BACKGROUND */}
           <div
@@ -78,41 +81,60 @@ const Home = () => {
             </div>
           </div>
 
-
-          <div className="flex justify-center gap-40 mb-20">
-            <SearchBar searchTerm={homeSearchTerm} setSearchTerm={setHomeSearchTerm} />
-            <div className="border text-slate-500 z-10 flex gap-10 bg-slate-900 border-white/10 rounded-full focus:outline-none focus:border-blue-500 transition-all pl-12 md:pl-15 py-3 xl:py-4 px-10 text-xs md:text-base xl:text-lg xl:min-w-100">
-              <Link to={generateSearchParamsString("name","rolls-royce")}>
-                <div className="cursor-pointer">Rolls-Royce</div>
-              </Link>
-              <Link to={generateSearchParamsString("name","ferrari")}>
-                <div className="cursor-pointer">Ferrari</div>
-              </Link>
-              <Link to={generateSearchParamsString("name","lamborghini")}>
-                <div className="cursor-pointer">Lamborghini</div>
-              </Link>
-              <Link to=".">
-              <div className="cursor-pointer">All</div>
-              </Link>
+          <div className="flex flex-col md:flex-row justify-center px-5 md:px-0 gap-5 lg:gap-20 xl:gap-30 2xl:gap-40 lg:mb-20">
+            <SearchBar
+              searchTerm={homeSearchTerm}
+              setSearchTerm={setHomeSearchTerm}
+            />
+            <div className="flex justify-between items-center z-10 p-2 bg-slate-900 border border-white/10 rounded-full">
+              {cat.map((item) => (
+                <Link
+                  key={item}
+                  to={
+                    item === "All"
+                      ? null
+                      : generateSearchParamsString("name", item.toLowerCase())
+                  }
+                >
+                  <button
+                    onClick={() => {
+                      setActiveFilter(item);
+                    }}
+                    className={`p-3 md:px-4 2xl:px-6 py-1 xl:py-1.5 rounded-full text-xs md:text-base xl:text-lg font-bold transition-all ${
+                      activeFilter === item
+                        ? "bg-blue-600 text-white"
+                        : "text-slate-400 hover:text-white"
+                    }`}
+                  >
+                    {item}
+                  </button>
+                </Link>
+              ))}
             </div>
           </div>
 
           <div className="grid gap-10 p-10 sm:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-15 xl:mt-20">
             {data
               .filter((item) => {
-                return homeSearchTerm.toLowerCase() === "" ? item : item.name.toLowerCase().includes(homeSearchTerm.toLowerCase())
+                return homeSearchTerm.toLowerCase() === ""
+                  ? item
+                  : item.name
+                      .toLowerCase()
+                      .includes(homeSearchTerm.toLowerCase());
               })
-              .filter(item => {
-                return nameFilter ? item.name.toLowerCase() === nameFilter : item
+              .filter((item) => {
+                return nameFilter
+                  ? item.name.toLowerCase() === nameFilter
+                  : item;
               })
               .map((item) => (
                 <div key={item.id}>
-                  <CarCard car={item} />
+                  <Link to={`${item.id}`}>
+                    <CarCard car={item} />
+                  </Link>
                 </div>
               ))}
-
           </div>
-
         </section>
       </PageTransition>
     </>

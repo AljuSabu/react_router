@@ -48,21 +48,21 @@ const Cars = () => {
 
       <PageTransition>
         <div className="min-h-screen pt-36 pb-20 px-5 md:px-10 lg:px-15 xl:px-20 2xl:px-30">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row xl:items-end justify-between gap-6 mb-12">
             <div className="space-y-5">
               {/* Heading */}
-              <h1 className="text-2xl md:text-4xl xl:text-5xl font-black text-white">
+              <h1 className="text-2xl md:text-4xl 2xl:text-5xl font-black text-white">
                 The Catalog
               </h1>
-              <p className="text-slate-400 text-xs md:text-base xl:text-xl max-w-2xl">
+              <p className="text-slate-400 text-xs md:text-base 2xl:text-xl max-w-2xl">
                 Discover our curated selection of high-performance luxury
                 vehicles.
               </p>
             </div>
 
-            <div className="flex gap-10">
+            <div className="flex flex-col xl:flex-row gap-5 2xl:gap-10">
               <SearchBar searchTerm={carSearch} setSearchTerm={setCarSearch} />
-              <div className="flex items-center p-2 bg-slate-900 border border-white/10 rounded-full">
+              <div className="flex justify-between items-center p-2 bg-slate-900 border border-white/10 rounded-full">
                 {categories.map((item) => (
                   <Link
                     key={item}
@@ -76,7 +76,7 @@ const Cars = () => {
                       onClick={() => {
                         setActiveFilter(item);
                       }}
-                      className={`px-6 py-2 rounded-full text-xs md:text-base xl:text-lg font-bold transition-all ${
+                      className={`px-3 xl:px-4 2xl:px-6 py-2 rounded-full text-nowrap text-xs md:text-sm xl:text-base 2xl:text-lg font-bold transition-all ${
                         activeFilter === item
                           ? "bg-blue-600 text-white"
                           : "text-slate-400 hover:text-white"

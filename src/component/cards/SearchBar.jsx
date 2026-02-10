@@ -9,7 +9,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
                 <input
                     type="text"
                     placeholder="Search models..."
-                    className="bg-slate-900 border border-white/10 rounded-full focus:outline-none focus:border-blue-500 transition-all pl-12 md:pl-15 py-3 xl:py-4 text-xs md:text-base xl:text-lg w-full md:w-70 lg:w-80 xl:w-100"
+                    className="bg-slate-900 border border-white/10 rounded-full focus:outline-none focus:border-blue-500 transition-all pl-12 md:pl-15 py-3 xl:py-4 text-xs md:text-base 2xl:text-lg w-full md:min-w-70 lg:min-w-80 xl:min-w-70 2xl:min-w-100"
                     value={searchTerm}
                     onChange={(e) => { setSearchTerm(e.target.value) }}
                 />
