@@ -75,7 +75,9 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-10 ">
           <div className="lg:col-span-2 p-8 rounded-2xl border border-white/10">
             <div className="flex justify-between items-center mb-8">
-              <h3 className="text-2xl text-white font-bold">Revenue Performance</h3>
+              <h3 className="text-2xl text-white font-bold">
+                Revenue Performance
+              </h3>
               <select className="bg-black text-sm border border-white/10 rounded-lg px-3 py-2 text-slate-400">
                 <option>Last 7 Weeks</option>
                 <option>Last Quarter</option>
