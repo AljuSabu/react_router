@@ -17,8 +17,8 @@ const Dashboard = () => {
         <title>Dashboard Admin</title>
       </Helmet>
 
-      <div className="space-y-8 px-20 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="space-y-8 px-5 md:px-20 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               id: 1,
@@ -72,13 +72,13 @@ const Dashboard = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-10 ">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 md:px-10 ">
           <div className="lg:col-span-2 p-8 rounded-2xl border border-white/10">
             <div className="flex justify-between items-center mb-8">
-              <h3 className="text-2xl text-white font-bold">
+              <h3 className="text-xl md:text-2xl text-white font-bold">
                 Revenue Performance
               </h3>
-              <select className="bg-black text-sm border border-white/10 rounded-lg px-3 py-2 text-slate-400">
+              <select className="bg-black text-xs md:text-sm border border-white/10 rounded-lg px-3 py-2 text-slate-400">
                 <option>Last 7 Weeks</option>
                 <option>Last Quarter</option>
               </select>
@@ -113,22 +113,22 @@ const Dashboard = () => {
           <div className=" p-8 rounded-2xl border border-white/10">
             <h3 className="text-xl font-bold mb-6">Recent Activity</h3>
             <div className="space-y-6">
-              {incomeData.map((tx) => (
-                <div key={tx.id} className="flex gap-4 items-center">
+              {incomeData.map((item) => (
+                <div key={item.id} className="flex gap-4 items-center">
                   <div className="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center text-blue-500">
                     <ReceiptLongIcon />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm font-bold text-white">
-                      {tx.carName} Sold
+                      {item.carName} Sold
                     </p>
-                    <p className="text-xs text-slate-500">{tx.customer}</p>
+                    <p className="text-xs text-slate-500">{item.customer}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm font-bold text-blue-400">
-                      ₹ {tx.amount / 1000}k
+                      ₹ {item.amount / 1000}k
                     </p>
-                    <p className="text-[10px] text-slate-600">{tx.date}</p>
+                    <p className="text-[10px] text-slate-600">{item.date}</p>
                   </div>
                 </div>
               ))}
