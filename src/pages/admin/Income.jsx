@@ -2,6 +2,7 @@ import React from "react";
 import { incomeData } from "../../data/data";
 import { Helmet } from "react-helmet";
 import PageTransition from "../../component/ui/PageTransition";
+import DownloadIcon from '@mui/icons-material/Download';
 
 const Income = () => {
   return (
@@ -12,8 +13,8 @@ const Income = () => {
 
       <PageTransition>
         <div className="space-y-6 md:space-y-8 xl:space-y-10 px-10 lg:px-20 xl:px-30 pb-30">
-          <div className="flex justify-between items-center">
-            <div className="md:space-y-1 xl:space-y-3">
+          <div className="flex flex-col md:flex-row justify-between md:items-center">
+            <div className=" md:space-y-1 xl:space-y-3 mb-4 md:mb-0">
               <h2 className="text-xl md:text-3xl xl:text-4xl font-black text-white">
                 Financial Ledger
               </h2>
@@ -21,8 +22,8 @@ const Income = () => {
                 Total gross revenue and profit breakdown.
               </p>
             </div>
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">
-              <i className="fa-solid fa-download"></i> Export Report
+            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-md md:rounded-lg lg:rounded-xl font-bold flex justify-center items-center gap-2 transition-all">
+              <DownloadIcon /> Export Report
             </button>
           </div>
 
@@ -89,16 +90,16 @@ const Income = () => {
             </table>
           </div>
         </div>
-        <div className="hidden space-y-4">
+        <div className="md:hidden space-y-4 px-5">
           {incomeData.map((income) => (
             <div
               key={income.id}
-              className="bg-stone-800 p-3 md:p-4 rounded md:rounded-lg shadow-sm shadow-stone-700"
+              className="bg-linear-to-br from-slate-900 via-black to-slate-900 border border-white/10 p-3 md:p-4 rounded-md"
             >
               <div
-                className="text-base md:text-xl text-orange-500 font-semibold"
+                className="text-base text-slate-500 font-semibold"
               >
-                
+                Transaction ID :
               </div>
 
               <div
