@@ -19,6 +19,7 @@ const AdminNavbar = () => {
     >
       <NavLink
         to=""
+        end
         className={({ isActive }) =>
           `cursor-pointer flex justify-center items-center hover:text-white transition-colors ${
             isActive ? "text-blue-500" : "text-white/60"
@@ -32,7 +33,7 @@ const AdminNavbar = () => {
         to="income"
         className={({ isActive }) =>
           `cursor-pointer flex justify-center items-center gap-0.5 md:gap-1 xl:gap-2 hover:text-white transition-colors ${
-            isActive ? "text-white" : "text-white/60"
+            isActive ? "text-blue-500" : "text-white/60"
           }`
         }
       >
@@ -44,7 +45,7 @@ const AdminNavbar = () => {
         to="inventory"
         className={({ isActive }) =>
           `cursor-pointer flex justify-center items-center gap-0.5 md:gap-1 xl:gap-2 hover:text-white transition-colors ${
-            isActive ? "text-white" : "text-white/60"
+            isActive ? "text-blue-500" : "text-white/60"
           }`
         }
       >
@@ -56,7 +57,7 @@ const AdminNavbar = () => {
         to="review"
         className={({ isActive }) =>
           `cursor-pointer flex justify-center items-center gap-0.5 md:gap-1 xl:gap-2 hover:text-white transition-colors ${
-            isActive ? "text-white" : "text-white/60"
+            isActive ? "text-blue-500" : "text-white/60"
           }`
         }
       >

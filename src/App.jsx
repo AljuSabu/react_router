@@ -13,10 +13,12 @@ import Income from "./pages/admin/Income";
 import Review from "./pages/admin/Review";
 import Inventory from "./pages/admin/Inventory";
 import ProtectedRoute from "./context/ProtectedRoute";
+import ScrollToTop from "./component/ui/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Layout />}>

@@ -10,7 +10,9 @@ const InfoCard = ({ car }) => {
         <h1 className="text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white tracking-tighter leading-none transition-all duration-500">
           {car.series}
         </h1>
-        <p className="text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-400 font-light">{car.name}</p>
+        <p className="text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-400 font-light">
+          {car.name}
+        </p>
       </div>
       <p className="text-xs md:text-base lg:text-sm xl:text-lg 2xl:text-xl text-slate-300 lg:max-w-80 xl:max-w-sm 2xl:max-w-md leading-relaxed">
         {car.shortDescription}

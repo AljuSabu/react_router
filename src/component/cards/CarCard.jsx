@@ -2,8 +2,8 @@ import React, { memo } from 'react'
 
 const CarCard = ({ car }) => {
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-linear-to-b from-zinc-900 to-black shadow-md hover:shadow-xl shadow-slate-900 transition-all duration-500 hover:-translate-y-2">
-      <div className="relative h-56 overflow-hidden">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-linear-to-b from-zinc-900 to-black shadow-md hover:shadow-xl shadow-slate-900 transition-all duration-500 hover:-translate-y-2">
+      <div className="relative h-56 shrink-0 overflow-hidden">
         <img
           src={car.images[0]}
           alt={`${car.name} ${car.series}`}
@@ -19,17 +19,20 @@ const CarCard = ({ car }) => {
           {car.tagline}
         </span>
       </div>
-      <div className="p-6 text-white">
-        <h3 className="text-xl font-semibold tracking-wide">
+
+      <div className="flex flex-1 flex-col p-6 text-white">
+        <h3 className="text-xl font-semibold tracking-wide line-clamp-1">
           {car.name}
           <span className="ml-2 text-zinc-400 font-light">
             {car.series}
           </span>
         </h3>
-        <p className="mt-3 text-xs md:text-sm text-zinc-400 leading-relaxed">
+        <p className="mt-3 text-xs md:text-sm text-zinc-400 leading-relaxed line-clamp-2">
           {car.shortDescription}
         </p>
-        <div className="mt-6 flex items-center justify-between">
+
+        {/* mt-auto pushes this to the bottom no matter how tall the text above is */}
+        <div className="mt-auto pt-6 flex items-center justify-between">
           <span className="text-lg font-medium text-amber-400">
             {car.price.display}
           </span>
