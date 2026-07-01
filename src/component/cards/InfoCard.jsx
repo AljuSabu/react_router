@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const InfoCard = ({ car }) => {
   return (
@@ -27,4 +27,4 @@ const InfoCard = ({ car }) => {
   );
 };
 
-export default InfoCard;
+export default memo(InfoCard);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const CarCard = ({ car }) => {
   return (
@@ -8,6 +8,7 @@ const CarCard = ({ car }) => {
           src={car.images[0]}
           alt={`${car.name} ${car.series}`}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          loading="lazy"
         />
 
         {/* Gradient */}
@@ -46,4 +47,4 @@ const CarCard = ({ car }) => {
   );
 };
 
-export default CarCard;
+export default memo(CarCard);

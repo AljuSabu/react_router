@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const ImgCard = ({ image, name }) => {
   return (
@@ -12,4 +12,4 @@ const ImgCard = ({ image, name }) => {
   );
 };
 
-export default ImgCard;
+export default memo(ImgCard);
