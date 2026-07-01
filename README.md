@@ -20,7 +20,7 @@ The platform allows users to browse premium vehicles, explore detailed specifica
 
 ## 🏠 Home Page
 
-![Home Page](./public/screenshorts/home.png)
+![Home Page](./public/screenshorts/homePage.png)
 
 ---
 
